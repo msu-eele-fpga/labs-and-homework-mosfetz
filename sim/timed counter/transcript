@@ -1,6 +1,0 @@
-# Compile of print_pkg.vhd was successful.
-# Compile of assert_pkg.vhd was successful.
-# Compile of tb_pkg.vhd was successful.
-# Compile of timed_counter.vhd was successful.
-# Compile of timed_counter_tb.vhd was successful with warnings.
-# 5 compiles, 0 failed with no errors.
