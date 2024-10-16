@@ -5,18 +5,18 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity pat_machine is
  
-			port   (clk						: in std_ulogic;
-					  rst					: in std_ulogic;
-					  clk_b0125				: in std_ulogic;
-					  clk_b025				: in std_ulogic;				
-					  clk_b05				: in std_ulogic;
-	              			  clk_b1				: in std_ulogic;
-					  clk_b2				: in std_ulogic;
-					  Pat_S0				: out std_logic_vector(6 downto 0);
-					  Pat_S1				: out std_logic_vector(6 downto 0);
-					  Pat_S2				: out std_logic_vector(6 downto 0);
-					  Pat_S3				: out std_logic_vector(6 downto 0);
-					  Pat_S4				: out std_logic_vector(6 downto 0);
+			port   (clk						: in std_logic;
+					  rst						: in std_logic;
+					  clk_b0125				: in std_logic;
+					  clk_b025				: in std_logic;				
+					  clk_b05				: in std_logic;
+	              clk_b1					: in std_logic;
+					  clk_b2					: in std_logic;
+					  Pat_S0					: out std_logic_vector(6 downto 0);
+					  Pat_S1					: out std_logic_vector(6 downto 0);
+					  Pat_S2					: out std_logic_vector(6 downto 0);
+					  Pat_S3					: out std_logic_vector(6 downto 0);
+					  Pat_S4					: out std_logic_vector(6 downto 0);
 					  blink					: out std_logic);
 				
 end entity pat_machine;
@@ -25,11 +25,11 @@ architecture pat_machine_arch of pat_machine is
 
 	signal LED_1AAT			: unsigned(6 downto 0) := "1000000";
 	signal LED_2AAT			: unsigned(6 downto 0) := "0000011";
-	signal LED_7UP			: unsigned(6 downto 0) := "0000000";
-	signal LED_7DOWN		: unsigned(6 downto 0) := "1111111";
+	signal LED_7UP				: unsigned(6 downto 0) := "0000000";
+	signal LED_7DOWN			: unsigned(6 downto 0) := "1111111";
 	signal LED_CUST			: unsigned(6 downto 0) := "1111010";
 	signal Count_Out_int		: integer range 0 to 50000000;
-	signal blinkB			: std_logic;
+	signal blinkB				: std_logic;
 
 
 

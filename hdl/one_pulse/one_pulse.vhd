@@ -5,17 +5,17 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity one_pulse is 
 	port(
-		clk	: in std_ulogic;
-		rst	: in std_ulogic;
-		input	: in std_ulogic;
-		pulse	: out std_ulogic);
+		clk	: in std_logic;
+		rst	: in std_logic;
+		input	: in std_logic;
+		pulse	: out std_logic);
 end entity one_pulse;
  
 
 
 architecture one_pulse_arch of one_pulse is 
 
-signal mem	: std_ulogic;
+signal mem	: std_logic;
 
 	begin
 

@@ -4,10 +4,10 @@ use IEEE.NUMERIC_STD.ALL;
 
 
 entity async_conditioner is 
-	port ( 	clk	: in std_ulogic;
-		rst	: in std_ulogic;
-		async	: in std_ulogic;
-		sync	: out std_ulogic
+	port ( 	clk	: in std_logic;
+		rst	: in std_logic;
+		async	: in std_logic;
+		sync	: out std_logic
 		);
 end entity async_conditioner;
 
@@ -16,8 +16,8 @@ architecture async_conditioner_arch of async_conditioner is
 
 	component synchronizer is
     	port (clk   : in    std_logic;
-      	      async : in    std_ulogic;
-      	      sync  : out   std_ulogic);
+      	      async : in    std_logic;
+      	      sync  : out   std_logic);
 	end component synchronizer;
 
 	component debouncer is 
@@ -25,24 +25,24 @@ architecture async_conditioner_arch of async_conditioner is
 	generic (clk_period	: time := 20 ns;
 		 debounce_time	:time);
 	
-	port (clk	: in	std_ulogic;
-	      rst	: in	std_ulogic;
-              input	: in	std_ulogic;
-	      debounced	: out	std_ulogic);
+	port (clk	: in	std_logic;
+	      rst	: in	std_logic;
+              input	: in	std_logic;
+	      debounced	: out	std_logic);
 
 	end component debouncer;
 
 	component one_pulse is 
-	port(   clk	: in std_ulogic;
-		rst	: in std_ulogic;
-		input	: in std_ulogic;
-		pulse	: out std_ulogic);
+	port(   clk	: in std_logic;
+		rst	: in std_logic;
+		input	: in std_logic;
+		pulse	: out std_logic);
 
 	end component one_pulse;
 
-signal pinput	: std_ulogic;
-signal input	: std_ulogic;
-signal debounce	: std_ulogic;
+signal pinput	: std_logic;
+signal input	: std_logic;
+signal debounce	: std_logic;
 
  
 	begin
