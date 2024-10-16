@@ -5,14 +5,14 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity clock_div is
  
-		port (clk				: in std_ulogic;
-		      rst				: in std_ulogic;
+		port (clk				: in std_logic;
+		      rst				: in std_logic;
 		      base_period		: in unsigned(7 downto 0);
-		      clk_b0125		: out std_ulogic;
-		      clk_b025			: out std_ulogic;				
-		      clk_b05			: out std_ulogic;
-	         clk_b1			: out std_ulogic;
-		      clk_b2			: out std_ulogic);
+		      clk_b0125		: out std_logic;
+		      clk_b025			: out std_logic;				
+		      clk_b05			: out std_logic;
+	         clk_b1			: out std_logic;
+		      clk_b2			: out std_logic);
 							
 end entity clock_div;
 
@@ -27,11 +27,11 @@ architecture clock_div_arch of clock_div is
 	signal	count_clk_b05			: integer range 0 to 50000000;
 	signal	count_clk_b1			: integer range 0 to 50000000;
 	signal	count_clk_b2			: integer range 0 to 100000000;
-	signal	wclk_b0125				: std_ulogic;
-	signal	wclk_b025				: std_ulogic;
-	signal	wclk_b05					: std_ulogic;
-	signal	wclk_b1					: std_ulogic;
-	signal	wclk_b2					: std_ulogic;
+	signal	wclk_b0125				: std_logic;
+	signal	wclk_b025				: std_logic;
+	signal	wclk_b05					: std_logic;
+	signal	wclk_b1					: std_logic;
+	signal	wclk_b2					: std_logic;
 	signal	cycles_clk_b0125		: integer range 0 to 50000000;
 	signal	cycles_clk_b025		: integer range 0 to 50000000;
 	signal	cycles_clk_b05			: integer range 0 to 50000000;

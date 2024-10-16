@@ -8,17 +8,18 @@ entity debouncer is
 	generic (clk_period	: time := 20 ns;
 		 debounce_time	:time);
 	
-	port (clk	: in	std_ulogic;
-	      rst	: in	std_ulogic;
-              input	: in	std_ulogic;
-	      debounced	: out	std_ulogic);
+	port (clk	: in	std_logic;
+	      rst	: in	std_logic;
+         input	: in	std_logic;
+	  debounced	: out	std_logic);
+	  
 end entity debouncer;
 
 
 architecture debouncer_arch of debouncer is 
 
-signal enable		:	std_ulogic; 
-signal latch		:	std_ulogic;
+signal enable		:	std_logic; 
+signal latch		:	std_logic;
 signal count		:	integer range 0 to 5000000;
 constant COUNTER_LIMIT	:	integer:= (debounce_time/clk_period);
 
