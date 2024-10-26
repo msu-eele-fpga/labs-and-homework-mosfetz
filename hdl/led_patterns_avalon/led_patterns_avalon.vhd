@@ -61,21 +61,25 @@ begin
 			when "00" =>  avs_readdata <= ("0000000000000000000000000000000" & hps_led_control);
 			when "01" => avs_readdata <= ("000000000000000000000000" & std_logic_vector(base_period));
 			when "10" => avs_readdata <= ("000000000000000000000000" & led_reg);
-			when others => avs_readdata <= (others => '0'); end case;
+			when others => avs_readdata <= (others => '0'); 
+			end case;
+			end if;
 			end process;
 			
 		avalon_register_write : process(clk)
 			begin
 			if rising_edge(clk) and avs_write = '1' then
-			case avs_address is
-			when "00" =>  avs_writedata <= ("0000000000000000000000000000000" & hps_led_control);
-			when "01" => avs_writedata <= ("000000000000000000000000" & std_logic_vector(base_period));
-			when "10" => avs_writedata <= ("000000000000000000000000" & led_reg);
-			when others => avs_writedata <= (others => '0'); end case;
+			  case avs_address is
+			when "00" => hps_led_control <= avs_writedata(0);
+			when "01" => base_period(7 downto 3) <= unsigned(avs_writedata(7 downto 3));
+			when "10" => led_reg(7 downto 0) <= avs_writedata(7 downto 0);
+			when others => 
+			end case;
+			end if;
 			end process;
 			
- end if;
- end process;
+			
+ 
 
  
 
