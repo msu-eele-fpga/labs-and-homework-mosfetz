@@ -87,7 +87,7 @@ architecture led_patterns_arch of led_patterns is
 
 	begin
 	
-	
+		
 	
 	
 																		 
@@ -206,6 +206,12 @@ architecture led_patterns_arch of led_patterns is
 		
 		OUTPUT_LOGIC : process (current_state)
 			begin
+			if hps_led_control = '1' then
+			
+				led(7 downto 0) <= led_reg;
+				
+				else
+			
 				case (current_state) is
 				
 					when S0	=> 
@@ -245,6 +251,7 @@ architecture led_patterns_arch of led_patterns is
 						
 						
 				end case;
+				end if;
 			end process;
 						
 	
