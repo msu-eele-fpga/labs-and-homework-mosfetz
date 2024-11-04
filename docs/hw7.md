@@ -2,91 +2,103 @@
 # HW7
 
 ## Overview
-This is an exercise designed to get us familier with Linux
+We explored using different Linux commands in this HW
 
 ## Deliverables
 
 ### Problem 1
 `$ wc lorem-ipsum.txt -w`
+
 ![alt](assets/hw7/problem%201.jpg)
 ### Problem 2
 `wc lorem-ipsum.txt -m`
+
 ![alt](assets/hw7/p2.jpg)
 ### Problem 3
 ` wc lorem-ipsum.txt -l`
+
 ![alt](assets/hw7/p3.jpg)
 ### Problem 4
 `sort -n  file-sizes.txt`
+
 ![alt](assets/hw7/p4.jpg)
 ### Problem 5
 `sort -r file-sizes.txt`
+
 ![alt](assets/hw7/p5.jpg)
 ### Problem 6
 `cut -f 3 -d "," log.csv`
+
 ![alt](assets/hw7/p6.jpg)
 ### Problem 7
-``
-![alt]()
+`cut -d "," -f 2-3 log.csv`
+
+![alt](assets/hw7/p7.jpg)
 ### Problem 8
-``
-![alt]()
+`cut -d "," -f 1,4  log.csv`
+
+![alt](assets/hw7/p8.jpg)
 ### Problem 9
-``
-![alt]()
+`head -n -5 gibberish.txt`
+
+![alt](assets/hw7/p9.jpg)
 ### Problem 10
-``
-![alt]()
+` tail -n -2 gibberish.txt`
+
+![alt](assets/hw7/p10.jpg)
 ### Problem 11
-``
-![alt]()
+` tail -n -20 log.csv`
+
+![alt](assets/hw7/p11.jpg)
 ### Problem 12
-``
-![alt]()
+`grep and gibberish.txt`
+
+![alt](assets/hw7/p12.jpg)
 ### Problem 13
-``
-![alt]()
+`grep -o -n we gibberish.txt`
+
+![alt](assets/hw7/p13.jpg)
 ### Problem 14
-``
-![alt]()
+`grep -P -o '[Tt]o \w+' gibberish.txt`
+
+![alt](assets/hw7/p14.jpg)
 ### Problem 15
-``
-![alt]()
+`grep -c FPGAs fpgas.txt`
+
+![alt](assets/hw7/p15.jpg)
 ### Problem 16
-``
-![alt]()
+`grep -P 'FPGAs are (hot|not)|Software engineers cower|Few have climbed the tower|Years gone by, nary a smile,|First d
+esign to compile' fpgas.txt`
+
+![alt](assets/hw7/p16.jpg)
 ### Problem 17
-``
-![alt]()
+`grep -r -c -P '\-\-' --include="*.vhd"`
+
+![alt](assets/hw7/p17.jpg)
 ### Problem 18
-``
-![alt]()
+`ls >ls-output.txt`
+`cat ls-output.txt`
+
+![alt](assets/hw7/p18.jpg)
 ### Problem 19
-``
-![alt]()
+`sudo dmesg | grep Mic`
+
+![alt](assets/hw7/p19.jpg)
 ### Problem 20
-``
-![alt]()
+`find -iname '*.vhd'|wc -l`
+
+![alt](assets/hw7/p20.jpg)
 ### Problem 21
-``
-![alt]()
+`grep -r -P '\-\-' --include="*.vhd" hdl | wc -l`
+
+![alt](assets/hw7/p21.jpg)
 ### Problem 22
-``
-![alt]()
+`grep -n FPGAs fpgas.txt | cut -f 1 -d ':'`
+
+![alt](assets/hw7/p22.jpg)
 ### Problem 23
-``
-![alt]()
+`du -h * | sort -h`
 
+![alt](assets/hw7/p23.jpg)
 
-
-
-### Questions 
-If the deliverables include questions you need to answer, put the answers here. Use blockquotes to indicate the question, then answer underneath the blockquote. Example formatting is shown below.
-
-> What is your favorite thing about SoC FPGAs?
-
-Everything!!!
-
-> What is the base address of your component? 
-
-0xDEADBEEF
 
