@@ -1,29 +1,19 @@
-# Submission template
 
-Use this template for lab and homework submissions. 
-
-A few assignments require a more in-depth report; those assignments will give directions on additional formatting and requirements.
-
-The template is found below the horizontal rule.
-
----
-
-# Name of lab or homework assignment (e.g., Lab 7: Verifying Your Custom Component Using System Console and `/dev/mem`)
+# Lab 8
 
 ## Overview
-Give a brief summary of what the assignment was about and what you did.
+This lab investigates creating a device driver for the Linux kernel and putting it on a Linux Kernel within the FPGA.
 
 ## Deliverables
-For any deliverables that are *not source code* (e.g., screenshots, answering questions), put those deliverables in this section.
 
-### Questions 
-If the deliverables include questions you need to answer, put the answers here. Use blockquotes to indicate the question, then answer underneath the blockquote. Example formatting is shown below.
+### Show “Hello world” and “Goodbye, cruel world” being printed in the kernel’s log buffer
 
-> What is your favorite thing about SoC FPGAs?
+![alt](assets/HW8_hello_goodbye.jpg)
 
-Everything!!!
+### Use uname to show all of your system’s information (consult uname’s man page to figure out how to do this).
 
-> What is the base address of your component? 
+![alt](assets/HW_8_uname.jpg)
 
-0xDEADBEEF
+### Show the output of modinfo on your kernel module
+![alt](assets/HW8_modinfo.jpg)
 
