@@ -11,7 +11,7 @@ entity clock_div is
 		      clk_b0125		: out std_logic;
 		      clk_b025			: out std_logic;				
 		      clk_b05			: out std_logic;
-	         clk_b1			: out std_logic;
+	              clk_b1			: out std_logic;
 		      clk_b2			: out std_logic);
 							
 end entity clock_div;
