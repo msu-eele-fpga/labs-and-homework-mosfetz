@@ -1,0 +1,7 @@
+{
+	"common_dir" : "C:/Users/nickl/Desktop/SoC FPGAs 1/repository/",
+	"acds_version" : "Version 20.1.1",
+	"platform" : "windows",
+	"os" : "Windows 10",
+	"qpf" : "quartus/pwm/pwm.qpf"
+}
